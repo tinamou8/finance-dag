@@ -1,6 +1,6 @@
 [project]
 name = "finance-dag"
-version = "0.1.0.dev4"
+version = "0.1.0.dev5"
 description = "Directed Acyclic Graph (DAG) management specifically for financial data workflows."
 authors = [
     { name = "José A. del Val", email = "delval@duck.com" }
@@ -129,9 +129,13 @@ dev = [
 include = [
     "/fdag",
 ]
+exclude = [
+    "/wheelhouse",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["fdag"]
+exclude = ["wheelhouse", "build"]
 
 [tool.hatch.build.targets.wheel.hooks.cython]
 dependencies = ["hatch-cython"]
