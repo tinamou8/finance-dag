@@ -39,7 +39,7 @@ extra:
       lang: es
   social:
     - icon: octicons/comment-discussion-16
-      link: https://github.com/josedvm95/finance-dag/discussions
+      link: https://github.com/tinamou8/finance-dag/discussions
       name: GitHub Discussions
 plugins:
   - i18n:
