@@ -139,6 +139,8 @@ dependencies = ["hatch-cython"]
 
 [tool.hatch.build.targets.wheel.hooks.cython.options]
 directives = { language_level = 3 }
+src = "fdag"
+compile_py = false
 
 [tool.cibuildwheel]
 build = "cp312-* cp313-* cp314-*"
