@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to a "realistic" Semantic Versioning as defined [here](https://bernat.tech/posts/version-numbers/)
 and [here](https://iscinumpy.dev/post/bound-version-constraints/#semver).
 
+## [0.1.0-dev1] - 2026-04-24
+
+### Fixed
+
+- Release automation.
+
 ## [0.1.0-dev0] - 2026-04-24
 
 ### Added
@@ -23,3 +29,4 @@ and [here](https://iscinumpy.dev/post/bound-version-constraints/#semver).
 - Pre-commit hooks.
 
 [0.1.0-dev0]: https://github.com/tinamou8/finance-dag/releases/tag/v0.1.0-dev0
+[0.1.0-dev1]: https://github.com/tinamou8/finance-dag/releases/tag/v0.1.0-dev1

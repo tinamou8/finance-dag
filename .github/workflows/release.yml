@@ -12,7 +12,26 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-wheels:
+    name: Build wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.17.0
+
+      - name: Upload wheel artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cibw-wheels-${{ matrix.os }}-${{ strategy.job-index }}
+          path: ./wheelhouse/*.whl
+
+  build-sdist:
     name: Build distribution
     runs-on: ubuntu-latest
     steps:
@@ -38,7 +57,7 @@ jobs:
 
   publish-pypi:
     name: Publish to PyPI
-    needs: [build]
+    needs: [build-wheels, build-sdist]
     runs-on: ubuntu-latest
     environment:
       name: pypi
@@ -47,8 +66,9 @@ jobs:
       - name: Download distributions
         uses: actions/download-artifact@v4
         with:
-          name: python-package-distributions
+          pattern: cibw-*
           path: dist/
+          merge-multiple: true
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1

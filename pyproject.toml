@@ -139,3 +139,10 @@ dependencies = ["hatch-cython"]
 
 [tool.hatch.build.targets.wheel.hooks.cython.options]
 directives = { language_level = 3 }
+
+[tool.cibuildwheel]
+build = "cp312-* cp313-* cp314-*"
+skip = "pp* *musllinux*"
+test-requires = "pytest"
+test-command = "pytest {project}/tests"
+build-verbosity = 1
