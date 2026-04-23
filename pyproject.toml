@@ -1,6 +1,6 @@
 [project]
 name = "finance-dag"
-version = "0.1.0-dev2"
+version = "0.1.0.dev3"
 description = "Directed Acyclic Graph (DAG) management specifically for financial data workflows."
 authors = [
     { name = "José A. del Val", email = "delval@duck.com" }
@@ -15,7 +15,6 @@ classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Financial and Insurance Industry",
-    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
@@ -112,7 +111,7 @@ exclude_lines = [
 ]
 
 [build-system]
-requires = ["hatchling", "hatch-cython", "Cython", "setuptools"]
+requires = ["hatchling", "hatch-cython", "Cython"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
