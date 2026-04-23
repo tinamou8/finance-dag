@@ -1,6 +1,6 @@
 [project]
 name = "finance-dag"
-version = "0.1.0-dev0"
+version = "0.1.0-dev2"
 description = "Directed Acyclic Graph (DAG) management specifically for financial data workflows."
 authors = [
     { name = "José A. del Val", email = "delval@duck.com" }
