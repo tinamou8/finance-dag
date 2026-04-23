@@ -1,6 +1,6 @@
 [project]
 name = "finance-dag"
-version = "0.1.0.dev3"
+version = "0.1.0.dev4"
 description = "Directed Acyclic Graph (DAG) management specifically for financial data workflows."
 authors = [
     { name = "José A. del Val", email = "delval@duck.com" }
@@ -140,6 +140,7 @@ dependencies = ["hatch-cython"]
 directives = { language_level = 3 }
 src = "fdag"
 compile_py = false
+includes = ["."]
 
 [tool.cibuildwheel]
 build = "cp312-* cp313-* cp314-*"
