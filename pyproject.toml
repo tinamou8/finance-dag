@@ -1,6 +1,6 @@
 [project]
 name = "finance-dag"
-version = "0.1.0.dev6"
+version = "0.1.0.dev7"
 description = "Directed Acyclic Graph (DAG) management specifically for financial data workflows."
 authors = [
     { name = "José A. del Val", email = "delval@duck.com" }
@@ -152,7 +152,6 @@ skip = "pp* *musllinux*"
 test-requires = "pytest"
 test-command = "pytest {project}/tests"
 build-verbosity = 1
-build-dir = "build/cibw"
 
 [tool.setuptools.packages.find]
 include = ["fdag*"]
