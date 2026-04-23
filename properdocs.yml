@@ -1,0 +1,93 @@
+site_name: finance-dag
+site_description: Directed Acyclic Graphs for finance
+repo_url: https://github.com/josedvm95/finance-dag
+theme:
+  name: materialx
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.footnote.tooltips
+    - content.code.copy
+    - content.tooltips
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+extra:
+  alternate:
+    - name: English
+      link: ""
+      lang: en
+    - name: Español
+      link: /es/
+      lang: es
+  social:
+    - icon: octicons/comment-discussion-16
+      link: https://github.com/josedvm95/finance-dag/discussions
+      name: GitHub Discussions
+plugins:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            Home: Principal
+            Changelog: Cambios
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: google
+markdown_extensions:
+  - pymdownx.snippets:
+      base_path: ["."]  # Allows the extension to read from the project root
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - admonition
+  - footnotes
+  - tables
+  - attr_list
+  - md_in_html
+  - abbr
+nav:
+  - Getting Started: index.md
+  - Features: features.md
+  - Changelog: changelog.md
+  - API Reference: api.md

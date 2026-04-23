@@ -1,0 +1,36 @@
+# --- System & IDE Noise ---
+.idea/
+.vscode/
+.git/
+.python-version
+.DS_Store
+
+# --- AI & Agent Metadata ---
+.gemini/
+.junie/
+AGENTS.md
+
+# --- Python Build & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.tox/
+.uv/
+build/
+dist/
+
+# --- Cython & C-Extensions ---
+*.c
+*.cpp
+*.so
+*.pyd
+*.html
+
+# --- Project Artifacts ---
+uv.lock
+.coverage
+.coverage.*
+coverage.xml
+.junit.xml
