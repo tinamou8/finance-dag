@@ -1,6 +1,6 @@
 site_name: finance-dag
 site_description: Directed Acyclic Graphs for finance
-repo_url: https://github.com/josedvm95/finance-dag
+repo_url: https://github.com/tinamou8/finance-dag
 theme:
   name: materialx
   palette:

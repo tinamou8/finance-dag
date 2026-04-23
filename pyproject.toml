@@ -32,10 +32,10 @@ lint = ["ruff>=0.15.10"]
 type = ["mypy>=1.20.1"]
 
 [project.urls]
-repository = "https://github.com/josedvm95/finance-dag"
+repository = "https://github.com/tinamou8/finance-dag"
 documentation = "https://finance-dag.readthedocs.io"
-issues = "https://github.com/josedvm95/finance-dag/issues"
-changelog = "https://github.com/josedvm95/finance-dag/blob/main/CHANGELOG.md"
+issues = "https://github.com/tinamou8/finance-dag/issues"
+changelog = "https://github.com/tinamou8/finance-dag/blob/main/CHANGELOG.md"
 
 [tool.mypy]
 python_version = "3.12"
