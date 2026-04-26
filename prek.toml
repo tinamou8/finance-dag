@@ -1,4 +1,4 @@
-exclude = '^(\.idea/|\.vscode/|\.gemini/|\.junie/|\.python-version|\.tox/|build/|dist/)'
+exclude = '^(\.idea/|\.vscode/|\.gemini/|\.junie/|\.python-version|\.tox/|build/|dist/|HEADER\.txt)'
 
 [[repos]]
 repo = "https://github.com/pre-commit/pre-commit-hooks"
@@ -21,3 +21,15 @@ args = [
     "--license-filepath", "HEADER.txt",
     "--comment-style", "#",
 ]
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "check-signoff"
+name = "Check Signed-off-by"
+entry = '''python -c "import sys; lines = open(sys.argv[1], encoding='utf-8').readlines(); sys.exit('❌ Commit message must be signed off. Use git commit -s to add it automatically.') if not any(l.startswith('Signed-off-by:') for l in lines) else sys.exit(0)"'''
+language = "system"
+always_run = true
+stages = ["commit-msg"]
+types = ["text"]

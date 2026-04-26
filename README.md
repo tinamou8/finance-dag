@@ -1,7 +1,7 @@
 # finance-dag: a finance focused DAG library for Python
 
 [![Test status](https://github.com/tinamou8/finance-dag/workflows/CI/badge.svg)](https://github.com/tinamou8/finance-dag/actions)
-[![PyPI package](https://badge.fury.io/py/finance-dag.svg)](https://pypi.python.org/pypi/finance-dag)
+[![PyPI package](https://badge.fury.io/py/finance-dag.svg?v=1)](https://pypi.python.org/pypi/finance-dag)
 [![Docs](https://readthedocs.org/projects/finance-dag/badge/?version=latest)](https://finance-dag.readthedocs.io/en/latest/)
 
 ## Introduction
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
 ## [Documentation](https://finance-dag.readthedocs.io/en/latest/)
 
-- [Changelog](https://finance-dag.readthedocs.io/en/latest/changelog.html)
+- [Changelog](https://finance-dag.readthedocs.io/en/latest/changelog/)
 
 ## Features
 
